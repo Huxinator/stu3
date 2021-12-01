@@ -24,6 +24,14 @@ interface UserInterface
 
     public function setEmail(string $email): UserInterface;
 
+    public function getMobile(): int;
+
+    public function setMobile(int $mobile): UserInterface;
+
+    public function getMobileToken(): int;
+
+    public function setMobileToken(int $mobiletoken): UserInterface;
+
     public function getAllianceId(): ?int;
 
     public function getFactionId(): ?int;

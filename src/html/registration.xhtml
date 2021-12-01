@@ -34,6 +34,16 @@
 					<span id="tokenok" style="display: none; color: Green;">OK</span>
 				</div>
 				<br />
+				<div class="divhead">Mobile Adresse</div>
+				<div class="divbody">
+					<input type="text" class="text" size="25" name="mobile" id="mobile"
+						onblur="checkMobile(this,this.value)" />
+					<span id="mobileerror" style="display: none; color: #FF0000;">Fehler</span>
+					<span id="mobileok" style="display: none; color: Green;">OK</span>
+					<div id="mobiledup" style="color: #FFAA00; display: none;">Diese Mobile Adresse ist bereits
+						registriert</div>
+				</div>
+				<br />
 				<div class="divhead">Regeln</div>
 				<div class="divbody">
 					<input type="checkbox" onclick="$('asberror').hide()" id="asb" name="asb" />Ich habe die

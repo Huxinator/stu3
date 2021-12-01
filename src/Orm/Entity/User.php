@@ -51,6 +51,12 @@ class User implements UserInterface
     private $email = '';
 
     /** @Column(type="integer", nullable=true) */
+    private $mobile;
+
+    /** @Column(type="integer", length=5) */
+    private $mobiletoken;
+
+    /** @Column(type="integer", nullable=true) */
     private $allys_id;
 
     /** @Column(type="integer", nullable=true) */
@@ -197,6 +203,28 @@ class User implements UserInterface
     {
         $this->email = $email;
         return $this;
+    }
+
+    public function getMobile(): int
+    {
+        return $this->mobile;
+    }
+
+    public function setMobile(int $mobile): UserInterface
+    {
+        $this->mobile = $mobile;
+        return $this;
+    }
+
+    public function setMobileToken(int $mobiletoken): UserInterface
+    {
+        $this->mobiletoken = $mobiletoken;
+        return $this;
+    }
+
+    public function getMobileToken(): int
+    {
+        return $this->mobiletoken;
     }
 
     public function getAllianceId(): ?int

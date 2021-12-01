@@ -14,6 +14,7 @@ interface PlayerCreatorInterface
     public function create(
         string $loginName,
         string $emailAddress,
+        int $mobileAddress,
         FactionInterface $faction,
         string $token
     ): void;
@@ -21,6 +22,7 @@ interface PlayerCreatorInterface
     public function createPlayer(
         string $loginName,
         string $emailAddress,
+        int $mobileAddress,
         FactionInterface $faction
     ): UserInterface;
 }

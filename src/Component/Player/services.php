@@ -19,6 +19,8 @@ use Stu\Component\Player\Register\PlayerCreator;
 use Stu\Component\Player\Register\PlayerCreatorInterface;
 use Stu\Component\Player\Register\RegistrationEmailSender;
 use Stu\Component\Player\Register\RegistrationEmailSenderInterface;
+use Stu\Component\Player\Register\RegistrationMobileSender;
+use Stu\Component\Player\Register\RegistrationMobileSenderInterface;
 use Stu\Component\Player\Register\PlayerDefaultsCreator;
 use Stu\Component\Player\Register\PlayerDefaultsCreatorInterface;
 use Stu\Component\Player\Validation\LoginValidation;
@@ -53,4 +55,5 @@ return [
     PlayerCreatorInterface::class => autowire(PlayerCreator::class),
     PlayerDefaultsCreatorInterface::class => autowire(PlayerDefaultsCreator::class),
     RegistrationEmailSenderInterface::class => autowire(RegistrationEmailSender::class),
+    RegistrationMobileSenderInterface::class => autowire(RegistrationMobileSender::class),
 ];

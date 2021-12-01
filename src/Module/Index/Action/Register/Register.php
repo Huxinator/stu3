@@ -41,6 +41,7 @@ final class Register implements ActionControllerInterface
     {
         $loginname = $this->registerRequest->getLoginName();
         $email = $this->registerRequest->getEmailAddress();
+        $mobile = $this->registerRequest->getMobileAdress();
         $factionId = $this->registerRequest->getFactionId();
         $token = $this->registerRequest->getToken();
 
@@ -62,6 +63,7 @@ final class Register implements ActionControllerInterface
             $this->playerCreator->create(
                 $loginname,
                 $email,
+		$mobile,
                 current($factions),
                 $token
             );
